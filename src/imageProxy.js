@@ -33,7 +33,7 @@ const imageProxyHandler = (requestUrl, response) => {
 
 const pipeRemoteImage = (remoteImageResponse, response) => {
     headers = remoteImageResponse.headers;
-    headers["Access-Control-Allow-Origin"] = "http://vocalmedia.retool.com";
+    headers["Access-Control-Allow-Origin"] = "https://vocalmedia.retool.com";
     response.writeHead(200, headers);
     console.log(`Response headers:`)
     console.log(response.headers)
