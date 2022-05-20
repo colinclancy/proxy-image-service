@@ -33,7 +33,8 @@ const imageProxyHandler = (requestUrl, response) => {
 
 const pipeRemoteImage = (remoteImageResponse, response) => {
     headers = remoteImageResponse.headers;
-    headers["Access-Control-Allow-Origin"] = "*";
+    // headers["Access-Control-Allow-Origin"] = "*";
+    headers["cross-origin-resource-policy"] = "cross-origin";
     response.writeHead(200, headers);
     console.log(`Response headers:`)
     console.log(headers)
