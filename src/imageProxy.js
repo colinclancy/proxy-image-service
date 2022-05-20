@@ -35,6 +35,8 @@ const pipeRemoteImage = (remoteImageResponse, response) => {
     headers = remoteImageResponse.headers;
     headers["Access-Control-Allow-Origin"] = "http://vocalmedia.retool.com";
     response.writeHead(200, headers);
+    console.log(`Response headers:`)
+    console.log(response.headers)
     remoteImageResponse.pipe(response, { end: true });
 }
 
